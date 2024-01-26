@@ -3,11 +3,12 @@ package endpoints;
 import io.restassured.response.ValidatableResponse;
 import utils.Properties;
 
-public class UpdatePlayer extends Api {
+public class GetPlayerByPlayerIdEndpoint extends Api {
 
-  public ValidatableResponse updatePlayer() {
+  public ValidatableResponse getPlayerByPlayerId(int playerId) {
     return requestSpecification(Properties.BASE_URI)
-        .put(Properties.UPDATE_PLAYER)
+        .pathParam("playerId", playerId)
+        .get(Properties.GET_PLAYER_BY_PLAYER_ID)
         .then()
         .statusCode(200)
         .log()

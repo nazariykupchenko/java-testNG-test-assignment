@@ -1,14 +1,18 @@
 package models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
-public class PlayerCreateResponseDto {
+@Data
+@AllArgsConstructor
+public class CreateResponseDto {
   @JsonProperty("age")
-  private int age;
+  private String age;
+  @JsonProperty("editor")
+  private String editor;
   @JsonProperty("gender")
   private String gender;
-  @JsonProperty("id")
-  private int id;
   @JsonProperty("login")
   private String login;
   @JsonProperty("password")
@@ -17,6 +21,4 @@ public class PlayerCreateResponseDto {
   private String role;
   @JsonProperty("screenName")
   private String screenName;
-
-
 }

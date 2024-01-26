@@ -1,13 +1,14 @@
 package endpoints;
 
 import io.restassured.response.ValidatableResponse;
+import models.PlayerUpdateRequestDto;
 import utils.Properties;
 
-public class GetPlayerByPlayerId extends Api {
+public class UpdatePlayerEndpoint extends Api {
 
-  public ValidatableResponse getPlayerByPlayerId() {
+  public ValidatableResponse updatePlayer( PlayerUpdateRequestDto body) {
     return requestSpecification(Properties.BASE_URI)
-        .get(Properties.GET_PLAYER_BY_PLAYER_ID)
+        .patch(Properties.UPDATE_PLAYER)
         .then()
         .statusCode(200)
         .log()

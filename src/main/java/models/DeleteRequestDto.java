@@ -2,7 +2,7 @@ package models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class PlayerDeleteRequestDto {
+public class DeleteRequestDto {
   @JsonProperty("playerId")
   private int playerId;
 
