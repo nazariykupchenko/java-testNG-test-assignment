@@ -20,6 +20,7 @@
     <aspectj.version>1.9.7</aspectj.version>
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <threadCount>3</threadCount>
   </properties>
 
   <dependencies>
@@ -82,7 +83,11 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>${maven-surefire-plugin.version}</version>
         <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
           <systemPropertyVariables>
+            <threadCount>${threadCount}</threadCount>
             <usedefaultListeners>${usedefaultListeners}</usedefaultListeners>
             <allure.results.directory>${project.basedir}/target/allure-results</allure.results.directory>
           </systemPropertyVariables>

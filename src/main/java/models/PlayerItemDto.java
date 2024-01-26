@@ -2,7 +2,7 @@ package models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class GetByPlayerIdResponseDto {
+public class PlayerItemDto {
 
   @JsonProperty("age")
   private int age;
@@ -10,13 +10,8 @@ public class GetByPlayerIdResponseDto {
   private String gender;
   @JsonProperty("id")
   private int id;
-  @JsonProperty("login")
-  private String login;
-  @JsonProperty("password")
-  private String password;
   @JsonProperty("role")
   private String role;
   @JsonProperty("screenName")
   private String screenName;
-
 }

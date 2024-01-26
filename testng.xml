@@ -2,9 +2,10 @@
 <suite name="TestSuite" parallel="methods" thread-count="3">
   <test name="PositiveTests">
     <classes>
-      <class name="tests.CreatePlayerTest"/>
-      <class name="tests.GetAllPlayersTest"/>
-      <class name='tests.GetPlayerByPlayerIdTest'/>
+      <class name="tests.PositiveTests"/>
+<!--      <class name="tests.GetAllPlayersTest"/>-->
+<!--      <class name='tests.GetPlayerByIdTest'/>-->
+<!--      <class name="tests.DeletePlayerTest"/>-->
     </classes>
   </test>
 </suite>

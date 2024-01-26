@@ -6,5 +6,5 @@ import java.util.List;
 public class GetAllResponseDto {
 
   @JsonProperty("players")
-  private List<PlayerItem> players;
+  private List<PlayerItemDto> players;
 }
